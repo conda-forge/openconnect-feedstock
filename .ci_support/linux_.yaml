@@ -9,7 +9,7 @@ channel_targets:
 docker_image:
 - condaforge/linux-anvil-comp7
 krb5:
-- '1.16'
+- 1.17.1
 libiconv:
 - '1.15'
 libxml2:

@@ -9,7 +9,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 krb5:
-- '1.16'
+- 1.17.1
 libiconv:
 - '1.15'
 libxml2:
