@@ -56,7 +56,7 @@ test:
 
 about:
   home: https://www.infradead.org/openconnect
-  license: LGPL-2.1
+  license: LGPL-2.1-only
   license_family: LGPL
   license_file:
     - COPYING.LGPL
