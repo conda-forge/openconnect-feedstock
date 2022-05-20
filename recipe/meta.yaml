@@ -18,7 +18,7 @@ source:
     folder: vpnc-scripts
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
 
   missing_dso_whitelist:
