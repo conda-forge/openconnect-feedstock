@@ -3,6 +3,9 @@ set -x
 
 mkdir -p ${PREFIX}/etc/openconnect
 cp vpnc-scripts/vpnc-script ${PREFIX}/etc/openconnect/vpnc-script
+# make sure the script is executable
+# see https://www.infradead.org/openconnect/vpnc-script.html
+chmod +x ${PREFIX}/etc/openconnect/vpnc-script
 
 ./configure \
     --prefix=${PREFIX} \
