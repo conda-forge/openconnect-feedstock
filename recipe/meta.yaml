@@ -13,8 +13,8 @@ source:
   # OpenConnect requires a configuration script to run.
   # It is downloaded from a separate repo.
   # See https://www.infradead.org/openconnect/vpnc-script.html
-  - url: https://gitlab.com/openconnect/vpnc-scripts/-/raw/e52f8e66391c4c55ee818841d236ebbb6ae284ed/vpnc-script
-    sha256: 6d95e3625cceb51e77628196055adb58c3e8325b9f66fcc8e97269caf42b8575
+  - git_url: https://gitlab.com/openconnect/vpnc-scripts.git
+    git_rev: e52f8e66
     folder: vpnc-scripts
 
 build:
