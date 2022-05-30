@@ -7,9 +7,13 @@ cp vpnc-scripts/vpnc-script ${PREFIX}/etc/openconnect/vpnc-script
 # see https://www.infradead.org/openconnect/vpnc-script.html
 chmod +x ${PREFIX}/etc/openconnect/vpnc-script
 
-if [[ $target_platform == osx-arm64 ]]; then
+if [[ $CONDA_BUILD_CROSS_COMPILATION == "1" ]]; then
     # Get an updated config.sub and config.guess
     cp $BUILD_PREFIX/share/gnuconfig/config.* .
+    # Workaround: disable language support as we can't run msgfmt
+    no_nls="--disable-nls"
+else
+    no_nls=""
 fi
 
 ./configure \
@@ -17,8 +21,11 @@ fi
     --sbindir=${PREFIX}/bin \
     --localstatedir=${PREFIX}/var \
     --with-vpnc-script=${PREFIX}/etc/openconnect/vpnc-script \
+    $no_nls \
 ##
 
 make -j${CPU_COUNT}
-make check
+if [[ $CONDA_BUILD_CROSS_COMPILATION == "1" ]]; then
+    make check
+fi
 make install
