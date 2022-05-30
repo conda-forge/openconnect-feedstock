@@ -7,6 +7,11 @@ cp vpnc-scripts/vpnc-script ${PREFIX}/etc/openconnect/vpnc-script
 # see https://www.infradead.org/openconnect/vpnc-script.html
 chmod +x ${PREFIX}/etc/openconnect/vpnc-script
 
+if [[ $target_platform == osx-arm64 ]]; then
+    # Get an updated config.sub and config.guess
+    cp $BUILD_PREFIX/share/gnuconfig/config.* .
+fi
+
 ./configure \
     --prefix=${PREFIX} \
     --sbindir=${PREFIX}/bin \
