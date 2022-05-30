@@ -10,8 +10,9 @@ chmod +x ${PREFIX}/etc/openconnect/vpnc-script
 if [[ $CONDA_BUILD_CROSS_COMPILATION == "1" ]]; then
     # Get an updated config.sub and config.guess
     cp $BUILD_PREFIX/share/gnuconfig/config.* .
-    # Workaround: disable language support as we can't run msgfmt
-    no_nls="--disable-nls"
+    ## Workaround: disable language support as we can't run msgfmt
+    #no_nls="--disable-nls"
+    no_nls=""
 else
     no_nls=""
 fi
