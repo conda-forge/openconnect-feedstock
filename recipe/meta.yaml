@@ -30,6 +30,7 @@ requirements:
     - libtool
     - pkg-config
     - make
+    - gnuconfig  # [unix]
   host:
     - gettext
     - gnutls >=3.6.13
