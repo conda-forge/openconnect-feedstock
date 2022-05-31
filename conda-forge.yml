@@ -8,4 +8,4 @@ test_on_native_only: true
 bot:
   automerge: true
 azure:
-  store_build_artifacts: False
+  store_build_artifacts: True
