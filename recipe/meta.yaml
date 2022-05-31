@@ -20,12 +20,10 @@ source:
 build:
   number: 0
   skip: true  # [win]
-
   missing_dso_whitelist:
     - '/System/Library/Frameworks/PCSC.framework/**'  # [osx]
-    
   skip_compile_pyc:
-    - "*.py"
+    - "*.py"  # [build_platform != target_platform]
 
 requirements:
   build:
