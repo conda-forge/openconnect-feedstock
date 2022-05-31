@@ -35,6 +35,7 @@ requirements:
     - gnuconfig  # [unix]
     - gettext
   host:
+    - python
     - gnutls >=3.6.13
     - libxml2
     - stoken
