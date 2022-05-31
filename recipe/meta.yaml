@@ -25,7 +25,7 @@ build:
     - '/System/Library/Frameworks/PCSC.framework/**'  # [osx]
     
   skip_compile_pyc:
-    - "*/libexec/openconnect/*.py"
+    - "*.py"
 
 requirements:
   build:
