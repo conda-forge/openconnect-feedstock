@@ -22,6 +22,7 @@ fi
     --sbindir=${PREFIX}/bin \
     --localstatedir=${PREFIX}/var \
     --with-vpnc-script=${PREFIX}/etc/openconnect/vpnc-script \
+    --disable-flask-tests \
     $no_nls \
 ##
 
