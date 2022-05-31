@@ -27,12 +27,14 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - python  # [build_platform != target_platform]
     - libtool
     - pkg-config
     - make
     - gnuconfig  # [unix]
     - gettext
   host:
+    - gettext
     - gnutls >=3.6.13
     - libxml2
     - stoken
