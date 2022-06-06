@@ -1,28 +1,29 @@
 {% set name = "openconnect" %}
-{% set version = "8.10" %}
+{% set version = "9.01" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  # OpenConnect source
-  - url: ftp://ftp.infradead.org/pub/openconnect/openconnect-{{ version }}.tar.gz
-    sha256: 30e64c6eca4be47bbf1d61f53dc003c6621213738d4ea7a35e5cf1ac2de9bab1
+  # OpenConnect source. Favor https source over ftp so as to let conda-forge bot pick up updates.
+  - url: https://www.infradead.org/openconnect/download/openconnect-{{ version }}.tar.gz
+    sha256: b3d7faf830e9793299d6a41e81d84cd4a3e2789c148c9e598e4585010090e4c7
 
   # OpenConnect requires a configuration script to run.
   # It is downloaded from a separate repo.
   # See https://www.infradead.org/openconnect/vpnc-script.html
-  - url: http://git.infradead.org/users/dwmw2/vpnc-scripts.git/snapshot/c0122e891f7e033f35f047dad963702199d5cb9e.tar.gz
-    sha256: aa3378529917a9e46f636cfc7d807eacfed30822252130e6355427903301e19a
+  - git_url: https://gitlab.com/openconnect/vpnc-scripts.git
+    git_rev: e52f8e66
     folder: vpnc-scripts
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
-
   missing_dso_whitelist:
     - '/System/Library/Frameworks/PCSC.framework/**'  # [osx]
+  skip_compile_pyc:
+    - "*.py"  # [build_platform != target_platform]
 
 requirements:
   build:
@@ -30,6 +31,8 @@ requirements:
     - libtool
     - pkg-config
     - make
+    - gnuconfig  # [unix]
+    - gettext
   host:
     - gettext
     - gnutls >=3.6.13
@@ -39,6 +42,7 @@ requirements:
     - libiconv
     - lz4-c
     - krb5
+    - nettle
   run:
     - gettext
     - gnutls
@@ -73,3 +77,4 @@ about:
 extra:
   recipe-maintainers:
     - stuarteberg
+    - leofang
