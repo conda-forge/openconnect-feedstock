@@ -9,7 +9,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 gnutls:
-- '3.6'
+- '3.7'
 krb5:
 - '1.19'
 libiconv:

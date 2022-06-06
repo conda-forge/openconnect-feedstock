@@ -11,7 +11,7 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 gnutls:
-- '3.6'
+- '3.7'
 krb5:
 - '1.19'
 libiconv:
