@@ -21,7 +21,7 @@ lz4_c:
 macos_machine:
 - arm64-apple-darwin20.0.0
 nettle:
-- '3.7'
+- '3.8'
 p11_kit:
 - 0.23.21
 pin_run_as_build:

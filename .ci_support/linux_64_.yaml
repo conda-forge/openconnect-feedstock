@@ -21,7 +21,7 @@ libxml2:
 lz4_c:
 - 1.9.3
 nettle:
-- '3.7'
+- '3.8'
 p11_kit:
 - 0.23.21
 pin_run_as_build:
