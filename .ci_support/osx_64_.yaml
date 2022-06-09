@@ -21,7 +21,9 @@ lz4_c:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 nettle:
-- '3.7'
+- '3.8'
+p11_kit:
+- 0.23.21
 pin_run_as_build:
   krb5:
     max_pin: x.x
