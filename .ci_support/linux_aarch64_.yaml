@@ -17,7 +17,7 @@ docker_image:
 gnutls:
 - '3.7'
 krb5:
-- '1.19'
+- '1.20'
 libiconv:
 - '1'
 libxml2:
