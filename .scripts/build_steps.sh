@@ -33,9 +33,9 @@ CONDARC
 
 
 mamba install --update-specs --yes --quiet --channel conda-forge \
-    conda-build pip boa conda-forge-ci-setup=3
+    conda-build pip boa conda-forge-ci-setup=3 "py-lief<0.12"
 mamba update --update-specs --yes --quiet --channel conda-forge \
-    conda-build pip boa conda-forge-ci-setup=3
+    conda-build pip boa conda-forge-ci-setup=3 "py-lief<0.12"
 
 # set up the condarc
 setup_conda_rc "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
@@ -47,7 +47,7 @@ source run_conda_forge_build_setup
 # "recipe/yum_requirements.txt" file. After updating that file,
 # run "conda smithy rerender" and this line will be updated
 # automatically.
-/usr/bin/sudo -n yum install -y libX11 libXcomposite libXcursor libXdamage libXext libXfixes libXi libXinerama libXrandr
+/usr/bin/sudo -n yum install -y libX11 libXcomposite libXcursor libXdamage libXext libXfixes libXi libXinerama libXrandr xdg-utils
 
 
 # make the build number clobber
