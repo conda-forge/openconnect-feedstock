@@ -18,6 +18,7 @@ fi
     --localstatedir=${PREFIX}/var \
     --with-vpnc-script=${PREFIX}/etc/openconnect/vpnc-script \
     --disable-flask-tests \
+    --with-external-browser \
 ##
 
 make -j${CPU_COUNT}
