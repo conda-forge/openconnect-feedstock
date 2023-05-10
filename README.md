@@ -1,11 +1,11 @@
-About openconnect
-=================
+About openconnect-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openconnect-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.infradead.org/openconnect
 
 Package license: LGPL-2.1-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openconnect-feedstock/blob/main/LICENSE.txt)
 
 Summary: OpenConnect is an SSL VPN client
 
