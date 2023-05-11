@@ -1,5 +1,5 @@
 {% set name = "openconnect" %}
-{% set version = "9.01" %}
+{% set version = "9.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,17 +8,17 @@ package:
 source:
   # OpenConnect source. Favor https source over ftp so as to let conda-forge bot pick up updates.
   - url: https://www.infradead.org/openconnect/download/openconnect-{{ version }}.tar.gz
-    sha256: b3d7faf830e9793299d6a41e81d84cd4a3e2789c148c9e598e4585010090e4c7
+    sha256: f1e0c4eed0ba79b87d6a0406a1500775c145c7b8392fa82094fc3e37dfab6547
 
   # OpenConnect requires a configuration script to run.
   # It is downloaded from a separate repo.
   # See https://www.infradead.org/openconnect/vpnc-script.html
   - git_url: https://gitlab.com/openconnect/vpnc-scripts.git
-    git_rev: e52f8e66
+    git_rev: 22756827
     folder: vpnc-scripts
 
 build:
-  number: 7
+  number: 0
   skip: true  # [win]
   missing_dso_whitelist:
     - '/System/Library/Frameworks/PCSC.framework/**'  # [osx]
