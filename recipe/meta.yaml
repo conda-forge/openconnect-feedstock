@@ -1,5 +1,5 @@
 {% set name = "openconnect" %}
-{% set version = "9.10" %}
+{% set version = "9.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   # OpenConnect source. Favor https source over ftp so as to let conda-forge bot pick up updates.
   - url: https://www.infradead.org/openconnect/download/openconnect-{{ version }}.tar.gz
-    sha256: f1e0c4eed0ba79b87d6a0406a1500775c145c7b8392fa82094fc3e37dfab6547
+    sha256: a3c63441395ebc073995a5f4713ab5599af63c04f7492b9b48df11a7fbcb06c7
 
   # OpenConnect requires a configuration script to run.
   # It is downloaded from a separate repo.
@@ -21,9 +21,9 @@ build:
   number: 0
   skip: true  # [win]
   missing_dso_whitelist:
-    - '/System/Library/Frameworks/PCSC.framework/**'  # [osx]
+    - /System/Library/Frameworks/PCSC.framework/**    # [osx]
   skip_compile_pyc:
-    - "*.py"  # [build_platform != target_platform]
+    - '*.py'  # [build_platform != target_platform]
 
 requirements:
   build:
@@ -67,7 +67,7 @@ about:
   license_file:
     - COPYING.LGPL
     - vpnc-scripts/COPYING
-  summary: 'OpenConnect is an SSL VPN client'
+  summary: OpenConnect is an SSL VPN client
   description: |
     OpenConnect is an SSL VPN client initially created to support Cisco's AnyConnect SSL VPN.
     It has since been ported to support the Juniper SSL VPN (which is now known as
