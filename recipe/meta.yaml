@@ -17,7 +17,7 @@ source:
   # It is downloaded from a separate repo.
   # See https://www.infradead.org/openconnect/vpnc-script.html
   - git_url: https://gitlab.com/openconnect/vpnc-scripts.git
-    git_rev: 22756827
+    git_rev: 1a2bbee3
     folder: vpnc-scripts
 
 build:
