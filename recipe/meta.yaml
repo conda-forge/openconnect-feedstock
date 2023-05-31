@@ -11,7 +11,7 @@ source:
     sha256: a2bedce3aa4dfe75e36e407e48e8e8bc91d46def5335ac9564fbf91bd4b2413e
     patches:
       # see https://gitlab.com/openconnect/openconnect/-/issues/614
-      - fix_macOS_make_check.patch  # [osx]
+      - fix_macOS_make_check.diff  # [osx]
 
   # OpenConnect requires a configuration script to run.
   # It is downloaded from a separate repo.
