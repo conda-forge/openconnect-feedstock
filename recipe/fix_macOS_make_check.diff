@@ -1,0 +1,12 @@
+diff --git a/tests/symbols b/tests/symbols
+index d434103..a15f8b6 100755
+--- a/tests/symbols
++++ b/tests/symbols
+@@ -37,7 +37,7 @@ function cleanup {
+ trap cleanup EXIT
+ 
+ ( sed -Enf ${SEDFILE} ${OPENCONNECT_H} | \
+-      sed -Enf- ${MAPFILE} ) > $TMPSYMBOLS
++      sed -Enf /dev/stdin ${MAPFILE} ) > $TMPSYMBOLS
+ 
+ SYMSBAD=no
