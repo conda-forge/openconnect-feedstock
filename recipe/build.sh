@@ -23,6 +23,6 @@ fi
 
 make -j${CPU_COUNT}
 if [[ $CONDA_BUILD_CROSS_COMPILATION != "1" ]]; then
-    make check
+    make VERBOSE=1 check
 fi
 make install
