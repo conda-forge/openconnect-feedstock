@@ -13,11 +13,11 @@ channel_sources:
 channel_targets:
 - conda-forge main
 docker_image:
-- quay.io/condaforge/linux-anvil-aarch64
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 gnutls:
 - '3.7'
 krb5:
-- '1.20'
+- '1.21'
 libiconv:
 - '1'
 libxml2:
