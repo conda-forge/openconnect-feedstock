@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '15'
+- '16'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -15,13 +15,13 @@ krb5:
 libiconv:
 - '1'
 libxml2:
-- '2.10'
+- '2.11'
 lz4_c:
 - 1.9.3
 macos_machine:
 - x86_64-apple-darwin13.4.0
 nettle:
-- '3.8'
+- '3.9'
 p11_kit:
 - '0.24'
 target_platform:
