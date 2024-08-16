@@ -2,8 +2,12 @@ c_compiler:
 - gcc
 c_compiler_version:
 - '12'
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.17'
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,13 +15,13 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 gnutls:
-- '3.7'
+- '3.8'
 krb5:
 - '1.21'
 libiconv:
 - '1'
 libxml2:
-- '2.11'
+- '2'
 lz4_c:
 - 1.9.3
 nettle:
@@ -26,5 +30,8 @@ p11_kit:
 - '0.24'
 target_platform:
 - linux-64
+zip_keys:
+- - c_stdlib_version
+  - cdt_name
 zlib:
-- '1.2'
+- '1'
