@@ -21,7 +21,7 @@ source:
     folder: vpnc-scripts
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   missing_dso_whitelist:
     - /System/Library/Frameworks/PCSC.framework/**    # [osx]
@@ -31,6 +31,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - libtool
     - pkg-config
     - make
