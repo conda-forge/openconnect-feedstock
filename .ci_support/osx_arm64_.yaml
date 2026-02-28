@@ -17,7 +17,7 @@ channel_targets:
 gnutls:
 - '3.8'
 krb5:
-- '1.21'
+- '1.22'
 libiconv:
 - '1'
 libxml2:
@@ -29,7 +29,7 @@ macos_machine:
 nettle:
 - '3.10'
 p11_kit:
-- '0.25'
+- '0.26'
 target_platform:
 - osx-arm64
 zlib:
